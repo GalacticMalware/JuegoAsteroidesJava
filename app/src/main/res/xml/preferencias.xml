@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    android:key="preferencias_principal" >
+
+<CheckBoxPreference
+    android:key="Musica"
+    android:title="Reproducir musica"
+    android:summary="Reproduce musica en el fondo"
+    />
+    <ListPreference
+        android:key="graficos"
+        android:title="Tipos de graficos"
+        android:summary="Se escoge la representacion de graficos"
+        android:entries="@array/tiposGraficos"
+        android:entryValues="@array/tiposGraficosValores"
+        android:defaultValue="1"
+        />
+    <EditTextPreference
+        android:key="fragmentos"
+        android:title="Numero de fragmentos"
+        android:summary="En cuantos trosos se divide un asteroide"
+        android:defaultValue="3"
+        />
+<PreferenceCategory android:title="Modoo multijugador">
+    <CheckBoxPreference
+        android:key="Activar "
+        android:title="Activar modo multijugador"
+        android:summary="">
+    </CheckBoxPreference>
+
+    <ListPreference
+        android:key="Activar"
+        android:title="Maximo multijugadores"
+        android:summary=""
+        android:entries="@array/Jugadores"
+        android:entryValues="@array/JugadoresNumero"
+        android:defaultValue="1"
+        ></ListPreference>
+
+    <EditTextPreference
+        android:key="Conexion"
+        android:title="Tipo de conexion"
+        android:defaultValue="Wifi"
+        >
+    </EditTextPreference>
+
+
+</PreferenceCategory>
+
+
+
+
+</PreferenceScreen>
